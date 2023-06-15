@@ -1,0 +1,20 @@
+    Su: 1.000 kg/m³
+    Hava: 1.225 kg/m³
+    Beton: 2.300 - 2.500 kg/m³
+    Ahşap (genel olarak): 300 - 900 kg/m³ (tür ve yoğunluklarına bağlı olarak değişebilir)
+    Demir: 7.860 kg/m³
+    Bakır: 8.960 kg/m³
+    Alüminyum: 2.700 kg/m³
+    Cam: 2.400 - 2.800 kg/m³ (cam türüne bağlı olarak değişebilir)
+    Plastik (genel olarak): 800 - 1.200 kg/m³ (plastik türüne bağlı olarak değişebilir)
+    Ahşap Kömürü: 300 - 600 kg/m³
+    Pamuk: 100 - 200 kg/m³ (sıkışıklık durumuna bağlı olarak değişebilir)
+    Pamuklu Bez: 400 - 700 kg/m³ (dokuma yoğunluğuna bağlı olarak değişebilir)
+    Şeker: 600 - 900 kg/m³ (kristal yapıya, nem oranına bağlı olarak değişebilir)
+    Yağ: 800 - 950 kg/m³ (yağ türüne bağlı olarak değişebilir)
+    Şampuan: 1000 - 1100 kg/m³ (marka ve içeriklere bağlı olarak değişebilir)
+    Süt: 1030 - 1060 kg/m³ (süt türüne, yağ içeriğine bağlı olarak değişebilir)
+    Şekerli Su: 1050 - 1150 kg/m³ (şeker miktarına bağlı olarak değişebilir)
+    Bal: 1300 - 1500 kg/m³ (bal türüne, nem oranına bağlı olarak değişebilir)
+    Asit: 1000 - 2000 kg/m³ (asit türüne bağlı olarak değişebilir)
+    Buz: 900 - 950 kg/m³ (sıcaklık ve basınca bağlı olarak değişebilir)

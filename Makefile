@@ -1,13 +1,7 @@
-########################################################################
-####################### Makefile Template ##############################
-########################################################################
-
-# Compiler settings - Can be customized.
 CC = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -Werror
 LDFLAGS = 
 
-# Makefile settings - Can be customized.
 APPNAME = experimental-tree
 EXT = .cpp
 SRCDIR = src
@@ -24,10 +18,6 @@ DELOBJ = $(OBJ)
 DEL = del
 EXE = .exe
 WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
-
-########################################################################
-####################### Targets beginning here #########################
-########################################################################
 
 all: $(APPNAME)
 

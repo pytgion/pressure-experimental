@@ -31,7 +31,6 @@ public:
         AddSolid("Granite", 2700.0);
         AddSolid("Quartz", 2650.0);
         AddSolid("Sapphire", 4000.0);
-        // Diğer katı maddelerin yoğunluk değerlerini buraya ekleyebilirsiniz.
     }
 
     void AddSolid(const std::string& name, double density) {
@@ -67,7 +66,6 @@ public:
         AddLiquid("Carbon Tetrachloride", 1600.0);
         AddLiquid("Chloroform", 1490.0);
         AddLiquid("Turpentine", 865.0);
-        // Diğer sıvı maddelerin yoğunluk değerlerini buraya ekleyebilirsiniz.
     }
 
     void AddLiquid(const std::string& name, double density) {
@@ -103,7 +101,6 @@ public:
         AddGas("Xenon", 5.894);
         AddGas("Krypton", 3.749);
         AddGas("Radon", 9.73);
-        // Diğer gaz maddelerin yoğunluk değerlerini buraya ekleyebilirsiniz.
     }
 
     void AddGas(const std::string& name, double density) {

@@ -54,10 +54,10 @@ public:
 
 class PressureMeasurement {
 private:
-    double fluidDensity;     // Sıvının yoğunluğu
-    double fluidHeight;      // Sıvının yüksekliği
-    double objectDepth;      // Cismin sıvıya gömülme derinliği
-    double gravity;          // Yerçekimi ivmesi - 9.8 m/s^2
+    double fluidDensity;     
+    double fluidHeight;      
+    double objectDepth;      
+    double gravity;         //9.8 m/s^2
 
 public:
     void setFluidDensity(double density) {

@@ -6,37 +6,37 @@
 
 class LiquidContainer {
 private:
-    double height;       // Height of the liquid
-    double density;      // Density of the liquid
-    double pressure;     // Pressure of the liquid
+    double height;
+    double density;
+    double pressure;
 
 public:
-    LiquidContainer()
-        : height(0.0), density(0.0) {}
+    LiquidContainer(double h = 15.0, double d = 1000.0)
+        : height(h), density(d) {}
 
-    void setHeight(double h) {
+    void setHeight(double h = 15.0) {
         height = h;
     }
 
-    void setDensity(double d) {
+    void setDensity(double d = 1000.0) {
         density = d;
     }
 
     double calculatePressure() {
-        pressure = density * 9.81 * height;  // Pressure calculation: P = density * g * h
+        pressure = density * 9.81 * height;
         return pressure;
     }
 };
 
 class GasContainer {
 private:
-    double volume;       // Volume of the gas
-    double temperature;  // Temperature of the gas
-    double pressure;     // Pressure of the gas
+    double volume;
+    double temperature;
+    double pressure;
 
 public:
-    GasContainer()
-        : volume(0.0), temperature(0.0) {}
+    GasContainer(double v = 25.0, double t = 25.0)
+        : volume(v), temperature(t) {}
 
     void setVolume(double v) {
         volume = v;
@@ -47,19 +47,22 @@ public:
     }
 
     double calculatePressure() {
-        pressure = (temperature * 8.314) / volume;  // Pressure calculation: P = (nRT) / V
+        pressure = (temperature * 8.314) / volume;
         return pressure;
     }
 };
 
 class PressureMeasurement {
 private:
-    double fluidDensity;     
-    double fluidHeight;      
-    double objectDepth;      
-    double gravity;         //9.8 m/s^2
+    double fluidDensity;
+    double fluidHeight;
+    double objectDepth;
+    double gravity;
 
 public:
+    PressureMeasurement(double density = 0.0, double height = 0.0, double depth = 0.0, double g = 0.0)
+        : fluidDensity(density), fluidHeight(height), objectDepth(depth), gravity(g) {}
+
     void setFluidDensity(double density) {
         fluidDensity = density;
     }
@@ -80,6 +83,25 @@ public:
         double fluidPressure = fluidDensity * gravity * (fluidHeight - objectDepth);
         return fluidPressure;
     }
+
+    double liquidPressureExperiment(double height, double density) {
+        LiquidContainer liquidContainer(height, density);
+        double liquidPressure = liquidContainer.calculatePressure();
+        return liquidPressure;
+    }
+
+    double gasPressureExperiment(double volume, double temperature) {
+        GasContainer gasContainer(volume, temperature);
+        double gasPressure = gasContainer.calculatePressure();
+        return gasPressure;
+    }
+
+    double pressureMeasurementExperiment(double fluidDensity, double fluidHeight, double objectDepth, double gravity) {
+        PressureMeasurement pressureMeasurement(fluidDensity, fluidHeight, objectDepth, gravity);
+        double measuredPressure = pressureMeasurement.calculatePressure();
+        return measuredPressure;
+    }
+
 };
 
 #endif

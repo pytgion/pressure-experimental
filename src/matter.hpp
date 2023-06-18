@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <limits>
 
 class LiquidContainer {
 private:
     double height;
     double density;
     double pressure;
+    unsigned int count;
 
 public:
     LiquidContainer(double h = 15.0, double d = 1000.0)
@@ -25,6 +27,14 @@ public:
     double calculatePressure() {
         pressure = density * 9.81 * height;
         return pressure;
+    }
+
+    void setCount(unsigned int c) {
+        count = c;
+    }
+
+    int getCount() {
+        return count;
     }
 };
 
@@ -58,6 +68,9 @@ private:
     double fluidHeight;
     double objectDepth;
     double gravity;
+    double force;
+    double solidSurface;
+    char    direction;
 
 public:
     PressureMeasurement(double density = 0.0, double height = 0.0, double depth = 0.0, double g = 0.0)
@@ -79,9 +92,26 @@ public:
         gravity = g;
     }
 
+    void setSolidSurface(double Surface) {
+        solidSurface = Surface;
+    }
+
+    void setForce(double f) {
+        force = f;
+    }
+
+    void setDirection(char d) {
+        direction = d;
+    }
+
     double calculatePressure() {
         double fluidPressure = fluidDensity * gravity * (fluidHeight - objectDepth);
         return fluidPressure;
+    }
+
+    double calculateVectoral() {
+        double solidPressure = force / solidSurface;
+        return solidPressure;
     }
 
     double liquidPressureExperiment(double height, double density) {
@@ -99,6 +129,12 @@ public:
     double pressureMeasurementExperiment(double fluidDensity, double fluidHeight, double objectDepth, double gravity) {
         PressureMeasurement pressureMeasurement(fluidDensity, fluidHeight, objectDepth, gravity);
         double measuredPressure = pressureMeasurement.calculatePressure();
+        return measuredPressure;
+    }
+
+    double solidMeasurementExperiment(double solidSurface, double force) {
+        PressureMeasurement pressureMeasurement(solidSurface, force);
+        double measuredPressure = pressureMeasurement.calculateVectoral();
         return measuredPressure;
     }
 
